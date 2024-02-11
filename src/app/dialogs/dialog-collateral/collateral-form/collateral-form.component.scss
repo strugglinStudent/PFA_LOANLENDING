@@ -1,0 +1,19 @@
+@import './../../../../scss/mixins';
+@import './../../../../scss/fonts';
+@import './../../dialog';
+
+.dialog-content {
+  .item {
+    &--max-withdraw {
+      button {
+        min-width: 0;
+        line-height: 2.2em;
+      }
+    }
+  }
+  .accordion-details {
+    mat-expansion-panel {
+      margin-top: 29px;
+    }
+  }
+}

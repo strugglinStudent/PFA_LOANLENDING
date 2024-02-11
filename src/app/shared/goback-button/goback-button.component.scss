@@ -1,0 +1,15 @@
+@import '../../../scss/_mixins.scss'; //variables
+
+.go-back {
+  width: 70px;
+  display: flex;
+  align-items: center;
+  color: var(--app-color-secondary);
+  padding-left: 20px;
+  cursor: pointer;
+  @include transition;
+}
+
+@media (min-width: 992px){
+  .go-back { height: 100px; }
+}

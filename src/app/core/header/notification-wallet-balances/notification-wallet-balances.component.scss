@@ -1,0 +1,10 @@
+@import 'src/scss/mixins';
+
+.notifications-container {
+  width: 182px;
+  max-height: 670px;
+  overflow: hidden;
+  position: absolute;
+  right: 352px;
+  @include transition();
+}

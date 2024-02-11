@@ -1,0 +1,47 @@
+<div class="row" *ngIf="class === 'company'">
+  <div class="col-12 col-lg-8 pr-lg-5">
+    <div class="img-box text-left">
+      <img [src]="identity.brand" class="img-responsive" />
+    </div>
+    <div class="main-text">
+      {{ identity.description }}
+    </div>
+    <div
+      *ngIf="identity.disclaimer"
+      class="d-flex justify-content-start align-items-center disclaimer-box"
+    >
+      <span>
+        <i class="fas fa-info-circle"></i> {{ identity.disclaimer }}
+      </span>
+    </div>
+  </div>
+  <div class="col-12 col-lg-4">
+    <div class="content">
+      <div class="row">
+        <app-item-feature
+          *ngFor="let feature of identity.features"
+          [feature]="feature"
+          class="col-6 feature-box my-3"
+        >
+        </app-item-feature>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="empty-container p-3 py-md-0 filter" *ngIf="hasIdentity() == undefined">
+  <div class="empty-row">
+    <i class="fas fa-id-badge"></i>
+    <div class="mt-3"></div>
+    <div class="title main-h3">
+      This loan was requested by an unknown borrower.
+    </div>
+    <div class="mt-2"></div>
+    <div class="title main-h4">
+      The signing address is
+      <a target="_blank" href="{{ borrowerLinkExplorer }}">
+        {{ loan.borrower }}
+      </a>.
+    </div>
+  </div>
+</div>

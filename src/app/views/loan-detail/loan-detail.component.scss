@@ -1,0 +1,203 @@
+@import 'src/scss/fonts';
+
+// reusable components
+.page-content {
+  background: var(--app-color-gray-700);
+  border-radius: 3px;
+  padding: 16px;
+}
+.page-title {
+  @include typography-body(2);
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: white;
+  margin: 0;
+  padding: 16px 6px;
+  transition: .3s;
+  &--tab {
+    cursor: pointer;
+    padding: 16px 20px;
+    &:not(.page-title--active) {
+      color: #959595;
+      border-bottom: 1px solid transparent;
+    }
+    &.page-title--active {
+      border-bottom: 1px solid white;
+    }
+  }
+}
+
+// custom components
+.page-header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 35px 0 0;
+  background: var(--app-color-gray-500);
+  &__button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.4em;
+    line-height: 1em;
+    margin-right: 23px;
+    cursor: pointer;
+  }
+  &__title {
+    @include typography-headline(6);
+    text-transform: uppercase;
+    margin: 0;
+    &,
+    img {
+      transition: .2s;
+    }
+    img {
+      height: 34px;
+    }
+  }
+  &__tabs {
+    margin-top: 10px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    &-content {
+      width: auto;
+      display: flex;
+      .page-title--tab {
+        padding-top: 14px;
+        padding-bottom: 14px;
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+.page-overview {
+  margin-top: 76px;
+  &__status {
+    padding: 18px 22px 26px;
+    color: #D8D8D8;
+    box-shadow: 0px 3px 6px #00000029;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    &-icon {
+      margin-right: 12px;
+    }
+    &-label {
+      @include styled-font('proxima-nova', 400, 18px);
+      margin-top: 3px;
+    }
+    &-value {
+      @include styled-font('Roboto', 700, 22px);
+    }
+    &--request {
+      padding-left: 14px;
+      .page-overview__status-icon {
+        font-size: 2.25em;
+      }
+      .page-overview__status-value {
+        color: #E25A5A;
+      }
+    }
+    &--active {
+      .page-overview__status-title {
+        @include typography-body(1);
+        text-transform: uppercase;
+        margin-bottom: 19px;
+      }
+      .page-overview__status-label {
+        @include typography-body(1);
+        color: #B1B1B1;
+      }
+      .page-overview__status-value {
+        @include styled-font('Roboto', 700, 30px);
+        &--paid {
+          color: var(--app-color-primary);
+          margin-bottom: 23px;
+        }
+        &--debt {
+          color: white;
+        }
+      }
+    }
+    &--paid {
+      .page-overview__status-icon {
+        font-size: 1.5em;
+        color: #59B159;
+        margin-top: 1px;
+        margin-right: 7px;
+      }
+      .page-overview__status-value {
+        @include styled-font('Roboto', 700, 35px);
+        line-height: 1em;
+        margin-left: -32px;
+        margin-top: 20px;
+        color: white;
+      }
+    }
+  }
+  &__cta {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 17px;
+    background: var(--app-color-gray-400);
+    ::ng-deep .button {
+      width: 100%;
+      box-shadow: none;
+    }
+  }
+}
+.page-details {
+  margin-top: 76px;
+}
+
+
+@media (min-width: 992px) {
+  .page-content {
+    padding: 20px 18px;
+  }
+  .page-header {
+    position: absolute;
+    top: 114px;
+    padding: 8px 0;
+    background: var(--app-color-gray-900);
+    &__title {
+      @include typography-headline(1);
+    }
+    &--fixed {
+      position: fixed;
+      top: 61px;
+      .page-header__title {
+        @include typography-headline(5);
+        img {
+          height: 24px;
+        }
+      }
+    }
+  }
+  .page-header,
+  .loan-detail {
+    padding-left: 72px;
+  }
+  .page-overview {
+    margin-top: 94px;
+    margin-bottom: 60px;
+    &__cta {
+      position: static;
+      padding: 0 1px;
+      background: none;
+      ::ng-deep .button {
+        height: 43px;
+        padding: 3px 0;
+        box-shadow: 0px 3px 6px #00000029;
+      }
+    }
+  }
+  .page-history {
+    margin-top: 66px;
+  }
+}

@@ -1,0 +1,105 @@
+<div class="button-group">
+
+  <ng-container *ngIf="[0, 1].includes(loanType)">
+    <div class="button-options"
+      (click)="openDetail('collateral')"
+      [ngClass]="{'active': viewDetail === 'collateral' ? true : false }"
+      [matTooltip]="loanType === 3 ? 'Guaranty' : 'Collateral'"
+      matTooltipPosition="below"
+    >
+      <i class="fas fa-coins"></i>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="[2, 3].includes(loanType)">
+    <div class="button-options"
+      (click)="openDetail('cosigner')"
+      [ngClass]="{'active': viewDetail === 'cosigner' ? true : false }"
+      matTooltip="Cosigner"
+      matTooltipPosition="below"
+    >
+      <i class="fas fa-shield-alt"></i>
+    </div>
+  </ng-container>
+
+  <div class="button-options"
+    (click)="openDetail('identity')"
+    [ngClass]="{'active': viewDetail === 'identity' ? true : false }"
+    matTooltip="Borrower"
+    matTooltipPosition="below"
+  >
+    <i class="fas fa-id-badge"></i>
+  </div>
+
+  <div
+    *ngIf="[0, 1, 4, 5].includes(loan.status) && loan?.descriptor.installments"
+    class="button-options"
+    (click)="openDetail('installments')"
+    [ngClass]="{'active': viewDetail === 'installments' ? true : false }"
+    matTooltip="Instalments"
+    matTooltipPosition="below"
+  >
+    <i class="fas fa-chart-pie"></i>
+  </div>
+
+
+
+  <mat-menu #appMenu="matMenu" yPosition="below">
+    <ng-container *ngIf="[0, 1].includes(loanType)">
+      <button
+        mat-menu-item
+        (click)="openDetail('collateral')"
+        [ngClass]="{'active': viewDetail === 'collateral' ? true : false }"
+      >
+        <i class="fas fa-coins"></i>
+        <span>{{ loanType === 3 ? 'Guaranty' : 'Collateral' }}</span>
+      </button>
+    </ng-container>
+    <ng-container *ngIf="[2, 3].includes(loanType)">
+      <button
+        mat-menu-item
+        (click)="openDetail('cosigner')"
+        [ngClass]="{'active': viewDetail === 'cosigner' ? true : false }"
+      >
+        <i class="fas fa-shield-alt"></i>
+        <span>Cosigner</span>
+      </button>
+    </ng-container>
+    <button
+      mat-menu-item
+      (click)="openDetail('identity')"
+      [ngClass]="{'active': viewDetail === 'identity' ? true : false }"
+    >
+      <i class="fas fa-id-badge"></i>
+      <span>Borrower</span>
+    </button>
+    <button
+      *ngIf="loan?.descriptor.installments"
+      mat-menu-item
+      (click)="openDetail('installments')"
+      [ngClass]="{'active': viewDetail === 'installments' ? true : false }"
+    >
+      <i class="fas fa-chart-pie"></i>
+      <span>Instalments</span>
+    </button>
+    <!--
+    <button mat-menu-item
+      (click)="openDetail('cosigner')"
+      [ngClass]="{'active': viewDetail === 'cosigner' ? true : false }">
+      <i class="fas fa-shield-alt"></i>
+      <span>
+        <ng-container *ngIf="loanType !== 3">
+          Collateral
+        </ng-container>
+        <ng-container *ngIf="loanType === 3">
+          Guaranty
+        </ng-container>
+      </span>
+    </button>
+    -->
+  </mat-menu>
+
+  <button mat-icon-button [matMenuTriggerFor]="appMenu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+</div>

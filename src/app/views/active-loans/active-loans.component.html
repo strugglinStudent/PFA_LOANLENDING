@@ -1,0 +1,40 @@
+<div class="body-scrollable activity-wrapper">
+  <div class="container">
+    <app-page-header
+      title="Activity explorer"
+      description="Check the Marketplace's active loans."
+      chipLabel="ACTIVE"
+    ></app-page-header>
+    <div class="loan-container">
+      <div class="text-center" *ngIf='!isAvailableLoans; else loanListHeader'>
+        <div class="title main-h1">There are no active loans</div>
+      </div>
+      <ng-template #loanListHeader>
+        <app-loan-list-header
+          view="active-loans"
+          (sort)="sortLoans($event)"
+        ></app-loan-list-header>
+      </ng-template>
+      <virtual-scroller
+        #scroll
+        [items]="loans"
+        [bufferAmount]="12"
+        [scrollThrottlingTime]="500"
+        (scroll)="onScroll($event)"
+      >
+        <div *ngFor="let loan of scroll.viewPortItems; trackBy:trackByLoanId">
+          <app-loan-list [loan]="loan" [backgroundLighter]="loan.position % 2">
+          </app-loan-list>
+        </div>
+        <app-loan-list-skeleton
+          *ngIf="isLoading"
+          items="20"
+        ></app-loan-list-skeleton>
+      </virtual-scroller>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>
+
+<app-borrow-fab-button>
+</app-borrow-fab-button>

@@ -1,0 +1,19 @@
+.wallet-avatar {
+  position: relative;
+  &:hover {
+    img {
+      transition: .3s;
+      opacity: .6;
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #85C36F;
+  }
+}

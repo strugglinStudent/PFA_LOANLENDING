@@ -1,0 +1,41 @@
+<div class="notification-container"
+[ngClass]="{'progressOn': !notification.confirmedTx }" *ngIf="notification">
+  <div class="status-container">
+    <div
+      class="icon-event"
+      [ngStyle]="{'background-color': notification.txObject?.color}"
+    >
+      <i
+        class="{{ notification.txObject?.materialClass }} {{ notification.txObject?.awesomeClass }}"
+      >
+        {{ notification.txObject?.icon }}
+      </i>
+    </div>
+    <div (click)='openTx()' class="action-event">
+      {{ notification.txObject?.title }}
+    </div>
+    <div class="separator"> · </div>
+    <div class="starring-event">
+      <a (click)='openAddress()'>
+        {{ notification.starringEventShort }}
+      </a>
+    </div>
+    <div class="separator"> · </div>
+    <div class="time-event">{{ deltaFormatted }}</div>
+  </div>
+  <div class="action-container">
+    <div class="supporter-txt" [innerHTML]="notification.txObject?.message">
+    </div>
+  </div>
+  <mat-progress-bar *ngIf='!notification.confirmedTx' [mode]="progressbarMode">
+  </mat-progress-bar>
+  <div
+    *ngIf='!notification.confirmedTx'
+    class="cancel-tx"
+    (click)="clickCancelTx(notification)"
+  >
+    <mat-icon class="cancel-tx__icon">
+      close
+    </mat-icon>
+  </div>
+</div>

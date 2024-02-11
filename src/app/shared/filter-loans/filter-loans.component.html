@@ -1,0 +1,146 @@
+  <div class="row">
+    <div class="col-sm-12">
+      <form [formGroup]="formGroup">
+        <div class="form-group">
+          <div class="row">
+
+            <div class="col-sm-12 col-lg-3">
+              <div class="title property mt-3 mb-2">
+                Borrowing currency
+              </div>
+              <mat-form-field>
+                <mat-select
+                  class="form-control"
+                  placeholder="Select a currency"
+                  formControlName="currency"
+                >
+                  <mat-option>--</mat-option>
+                  <mat-option
+                    *ngFor="let currency of currencies"
+                    [value]="currency"
+                  >
+                    {{ currency }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+
+            <div class="col-sm-12 col-lg-3">
+              <div class="title property mt-3 mb-2">
+                Amount
+              </div>
+              <div class="row">
+                <div class="col-xs-6 col-sm-6">
+                  <div
+                    class="form-group"
+                    [class.form-group--readonly]="!currency?.value"
+                  >
+                    <mat-form-field>
+                      <input
+                        matInput
+                        type='number'
+                        placeholder="Set min."
+                        formControlName="amountStart"
+                        autocomplete="off"
+                        pattern='^(0*[1-9][0-9]*(\.[0-9]+)?|0+\.[0-9]*[1-9][0-9]*)$'
+                        [readonly]="!currency?.value"
+                      >
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-sm-6">
+                  <div
+                    class="form-group"
+                    [class.form-group--readonly]="!currency?.value"
+                  >
+                    <mat-form-field>
+                      <input
+                        matInput
+                        type='number'
+                        placeholder="Set max."
+                        formControlName="amountEnd"
+                        autocomplete="off"
+                        pattern='^(0*[1-9][0-9]*(\.[0-9]+)?|0+\.[0-9]*[1-9][0-9]*)$'
+                        [readonly]="!currency?.value"
+                      >
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-lg-3">
+              <div class="title property mt-3 mb-2">
+                Duration
+              </div>
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="form-group" formGroupName="duration">
+                    <mat-form-field>
+                      <input
+                        matInput
+                        type='number'
+                        placeholder="Days"
+                        formControlName="days"
+                        autocomplete="off"
+                        pattern='^(0*[1-9][0-9]*(\.[0-9]+)?|0+\.[0-9]*[1-9][0-9]*)$'
+                      >
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group" formGroupName="duration">
+                    <mat-form-field>
+                      <input
+                        matInput
+                        type='number'
+                        placeholder="Months"
+                        formControlName="months"
+                        autocomplete="off"
+                        pattern='^(0*[1-9][0-9]*(\.[0-9]+)?|0+\.[0-9]*[1-9][0-9]*)$'
+                      >
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group" formGroupName="duration">
+                    <mat-form-field>
+                      <input
+                        matInput
+                        type='number'
+                        placeholder="Years"
+                        formControlName="years"
+                        autocomplete="off"
+                        pattern='^(0*[1-9][0-9]*(\.[0-9]+)?|0+\.[0-9]*[1-9][0-9]*)$'
+                      >
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-lg-3">
+              <div class="title property mt-3 mb-2">
+                Annual interest rate
+              </div>
+              <div class="form-group">
+                <mat-form-field>
+                  <input
+                    matInput
+                    type='number'
+                    placeholder="Set min. rate"
+                    max='200'
+                    formControlName="annualInterest"
+                    autocomplete="off"
+                    pattern='^(0*[1-9][0-9]*(\.[0-9]+)?|0+\.[0-9]*[1-9][0-9]*)$'
+                  >
+                  <span matSuffix>%</span>
+                </mat-form-field>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
