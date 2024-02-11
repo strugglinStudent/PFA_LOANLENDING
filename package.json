@@ -16,7 +16,6 @@
     "@truffle/hdwallet-provider": "^1.4.0",
     "bignumber.js": "^9.0.0",
     "openzeppelin-solidity": "^2.4.0",
-    "truffle-hdwallet-provider": "^1.0.17",
-    "node-sass": "^6.0.0", "sass-loader": "^11.1.1" 
+    "truffle-hdwallet-provider": "^1.0.17"
   }
 }

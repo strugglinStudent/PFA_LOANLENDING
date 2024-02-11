@@ -123,15 +123,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_killer\",\"type\":\"address\"}],\"name\":\"LogKilled\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"}],\"name\":\"LogResumed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"}],\"name\":\"LogStopped\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"getOwner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"kill\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"resume\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"setOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"success\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"stop\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/Jihen/MLending0/contracts/Stoppable.sol\":\"Stoppable\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Jihen/MLending0/contracts/Ownable.sol\":{\"keccak256\":\"0xd6dd3d15a75a551930a5d238df9af072ff822f376911d4e9d00386172a2551a7\",\"urls\":[\"bzz-raw://b3f69a6f0092ac22f714dfa0a55be7b0dbeafbc4d54b786599326dc493273321\",\"dweb:/ipfs/QmXJsy5GELkLEEGqr4hfT5AJV4nnFweFbdXiMhxTMQkA6U\"]},\"/C/Users/Jihen/MLending0/contracts/Stoppable.sol\":{\"keccak256\":\"0x6e4f0d3187d8eb9e5743662a24983112144e093e8b18f4a85645441f4cde253f\",\"urls\":[\"bzz-raw://394185c442cc33e37161552300d0f18552da50d92c7ec8e6e87c7971d66157c4\",\"dweb:/ipfs/QmcQmZoezhkHhav8pZxmLWMcRNrcWr7TD1eV1mNNCz3LmB\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_killer\",\"type\":\"address\"}],\"name\":\"LogKilled\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"}],\"name\":\"LogResumed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"}],\"name\":\"LogStopped\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"getOwner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"kill\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"resume\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"setOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"success\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"stop\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/Jihen/MLending1/contracts/Stoppable.sol\":\"Stoppable\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Jihen/MLending1/contracts/Ownable.sol\":{\"keccak256\":\"0xd6dd3d15a75a551930a5d238df9af072ff822f376911d4e9d00386172a2551a7\",\"urls\":[\"bzz-raw://b3f69a6f0092ac22f714dfa0a55be7b0dbeafbc4d54b786599326dc493273321\",\"dweb:/ipfs/QmXJsy5GELkLEEGqr4hfT5AJV4nnFweFbdXiMhxTMQkA6U\"]},\"/C/Users/Jihen/MLending1/contracts/Stoppable.sol\":{\"keccak256\":\"0x6e4f0d3187d8eb9e5743662a24983112144e093e8b18f4a85645441f4cde253f\",\"urls\":[\"bzz-raw://394185c442cc33e37161552300d0f18552da50d92c7ec8e6e87c7971d66157c4\",\"dweb:/ipfs/QmcQmZoezhkHhav8pZxmLWMcRNrcWr7TD1eV1mNNCz3LmB\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.5.0;\r\n\r\nimport \"./Ownable.sol\";\r\n\r\ncontract Stoppable is Ownable {\r\n\r\n\r\n    bool private stopped;\r\n    bool private killed;\r\n\r\n    event LogStopped(address _owner);\r\n    event LogResumed(address _owner);\r\n    event LogKilled(address _killer);\r\n\r\n    /*\r\n    The constructor function instantiates the value\r\n    for the state variables stopped and killed to false.\r\n    */\r\n    constructor()\r\n    internal\r\n    {\r\n        stopped = false;\r\n        killed = false;\r\n    }\r\n\r\n    /*\r\n    This modifier checks if the contract is killed.\r\n    WithdrawWhenKilled() uses this modifier so that it\r\n    can only be called in the event that the contract\r\n    has been killed, and not before.\r\n    */\r\n    modifier\r\n    whenKilled()\r\n    {\r\n        require (killed, \"Contract is alive\");\r\n        _;\r\n    }\r\n\r\n    /*\r\n    This modifier checks to see if the contract is alive,\r\n    as long as this is the case, functions will run as\r\n    expected.\r\n    */\r\n    modifier\r\n    whenAlive()\r\n    {\r\n        require(!killed, \"Contract is dead\");\r\n        _;\r\n    }\r\n\r\n    /*\r\n    This modifier checks to see if the contract has\r\n    been stopped or not. As long as whenRunning reamins\r\n    true, functions will run as expected.\r\n    */\r\n    modifier\r\n    whenRunning()\r\n    {\r\n        require(!stopped, \"Contract is paused.\");\r\n        _;\r\n    }\r\n\r\n    /*\r\n    This mofidier checks that the contract is paused.\r\n    Functions using this modifier may continue to function\r\n    when the contracts state has been Stopped.\r\n    Functions like Resume() and Kill() may be\r\n    called during this state.\r\n    */\r\n    modifier\r\n    whenPaused()\r\n    {\r\n        require(stopped, \"Contract is running\");\r\n        _;\r\n    }\r\n\r\n    /*\r\n    This function allows the owner to freeze\r\n    the use of functions labelled with the whenRunning\r\n    modifier. In the case of an emergency where the use\r\n    of the DApp must be limited, this can be called by the\r\n    owner to limit damage and usage until the issue is resolved.\r\n    */\r\n    function stop()\r\n    public\r\n    onlyOwner\r\n    whenAlive\r\n    whenRunning\r\n    {\r\n        stopped = true;\r\n        emit LogStopped(msg.sender);\r\n    }\r\n\r\n    /*\r\n    This function allows the owner to resume\r\n    the use of functions that have been previously\r\n    stopped. In the case that things were resolved\r\n    in the time that the contract was stopped, we\r\n    can then resume the contract and have it run again.\r\n    */\r\n    function resume()\r\n    public\r\n    onlyOwner\r\n    whenAlive\r\n    whenPaused\r\n    {\r\n        stopped = false;\r\n        emit LogResumed(msg.sender);\r\n    }\r\n\r\n    /*\r\n    This function is a two step process to prevent\r\n    an irreversible mistake. This kill function\r\n    essentially puts the contract into an un-resumable\r\n    state, that when called, cannot be undone. For this\r\n    to successfully execute, the contract must be paused first.\r\n    The only function that can be utilised in the event of the\r\n    contract being killed is the withdrawWhenKilled function that\r\n    is only accessible to the owner.\r\n    */\r\n    function kill()\r\n    public\r\n    onlyOwner\r\n    whenAlive\r\n    whenPaused\r\n    {\r\n        killed = true;\r\n        emit LogKilled(msg.sender);\r\n    }\r\n\r\n}",
-  "sourcePath": "C:\\Users\\Jihen\\MLending0\\contracts\\Stoppable.sol",
+  "sourcePath": "C:\\Users\\Jihen\\MLending1\\contracts\\Stoppable.sol",
   "ast": {
-    "absolutePath": "/C/Users/Jihen/MLending0/contracts/Stoppable.sol",
+    "absolutePath": "/C/Users/Jihen/MLending1/contracts/Stoppable.sol",
     "exportedSymbols": {
       "Stoppable": [
         812
@@ -152,7 +152,7 @@
         "src": "0:23:3"
       },
       {
-        "absolutePath": "/C/Users/Jihen/MLending0/contracts/Ownable.sol",
+        "absolutePath": "/C/Users/Jihen/MLending1/contracts/Ownable.sol",
         "file": "./Ownable.sol",
         "id": 686,
         "nodeType": "ImportDirective",
@@ -1610,7 +1610,7 @@
   },
   "legacyAST": {
     "attributes": {
-      "absolutePath": "/C/Users/Jihen/MLending0/contracts/Stoppable.sol",
+      "absolutePath": "/C/Users/Jihen/MLending1/contracts/Stoppable.sol",
       "exportedSymbols": {
         "Stoppable": [
           812
@@ -1634,7 +1634,7 @@
       {
         "attributes": {
           "SourceUnit": 684,
-          "absolutePath": "/C/Users/Jihen/MLending0/contracts/Ownable.sol",
+          "absolutePath": "/C/Users/Jihen/MLending1/contracts/Ownable.sol",
           "file": "./Ownable.sol",
           "scope": 813,
           "symbolAliases": [
@@ -3302,7 +3302,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-06-16T11:02:57.305Z",
+  "updatedAt": "2021-06-17T08:05:11.123Z",
   "devdoc": {
     "methods": {}
   },

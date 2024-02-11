@@ -1,4 +1,4 @@
-pragma solidity 0.8.5;
+pragma solidity >=0.5.0 <0.6.0;
 
 import "openzeppelin-solidity/contracts/math/SafeMath.sol";
 import "./Stoppable.sol";
@@ -69,10 +69,10 @@ contract Loan is Stoppable {
 
     mapping(uint256 => Loans) public loans;
 
-    
-    /*Checks if the deposit of the loan, with
-    the specified loan ID, has been paid.*/
-    
+    /*
+    Checks if the deposit of the loan, with
+    the specified loan ID, has been paid.
+    */
     modifier paidDeposit(uint _loanId) {
          require(loans[_loanId].status == Status.ACTIVE, "This loan is not active");
         _;
@@ -96,7 +96,7 @@ contract Loan is Stoppable {
     is available as long as it hasn't been killed
     or stopped (see stoppable & ownable).
     */
-    function createLoan(uint _interest, address _borrower)
+    function createLoan(uint _interest, address _borrower, uint _depositPercentage)
     external
     payable
     whenRunning
