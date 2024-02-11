@@ -1,7 +1,0 @@
-@import '../../../../scss/mixins';
-
-@media (min-width: 992px) {
-  virtual-scroller {
-    height: calc(100vh - 359px);
-  }
-}
